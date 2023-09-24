@@ -1,59 +1,114 @@
+.cardcontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+}
+
 .card {
-    width: 400px;
-    margin: 0 auto;
-    border: 1px solid;
-    padding: 10px;
-    text-align: center;
-}
-.details {
-  margin: 10 px;
-  padding: 10px;
-}
-
-.details summary{
-  font-size: 12px;
-}
-
-.buttons {
-  display: block;
-}
-
-.buttons button:focus, 
-.buttons button:hover {
+  text-align: center;
+  max-width: 400px;
+  border: 8px solid #ccc;
+  border-color: magenta;
+  margin: 8px;
   background-color: pink;
+  transition: background-color 0.3s ease;
 }
 
-.buttons button:active {
-  bakground-color: blue;
+
+h2 {
+  font-size: 36px;
+  margin-bottom: 8px;
 }
 
-.button[data-toggle-btn] {
-  padding: 10px;
-  font-size: 15px;
-  display: block;
+.card img {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 8px solid magenta;
+}
+.card-content {
+  padding: 20px;
 }
 
-@media only screen and (max-width: 1200px){
-  .wrapper {
-    background-color: pink;
+p {
+  font-size: 18px;
+}
+
+  #hideButton {
+  font-size: 36px;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+#hideButton span {
+  display: inline-block;
+  padding: 20px 40px;
+}
+
+#hideButton:hover {
+  color: black;
+  background-color: gold; /* Change the background color on hover */
+}
+  
+  #duplicateButton:focus, #duplicateButton:hover {
+  font-size: 36px;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  }
+  
+  #toggleButton:focus,#toggleButton:hover {
+  font-size: 36px;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: orange;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  }
+  
+  #changeHeadingButton:focus, #changeHeadingButton:hover {
+  font-size: 36px;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: yellow;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  }
+  
+  #removeDuplicate:focus, #removeDuplicate:hover {
+  font-size: 36px;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: green;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  }
+   
+/* Media query to hide the details button on screens 800px and below */
+@media only screen and (max-width: 800px) {
+  #hideButton {
+    display: none; /* Hide the summary button for screens 800px and below */
   }
 }
-@media only screen and (max-width: 600px){
-  .wrapper {
-    background-color: purple;
-  }
-}
-@media only screen and (max-width: 425px){
-  .wrapper {
-    font-weight: normal;
-  }
-  .wrapper .header h3 {
-    font-size: 12px;
-  }
-  .wrapper .header h4 {
-    font-size: 10px !important;
-  }
-  details {
-    display: none;
-  }
-}
+
+/* always put media query last */
